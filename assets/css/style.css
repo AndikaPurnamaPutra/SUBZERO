@@ -1,0 +1,2683 @@
+@font-face {
+  font-family: "neue_montrealbold";
+  src: url("/assets/font/neuemontreal-bold-webfont.woff2") format("woff2"), url("/assets/font/neuemontreal-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neue_montreallight";
+  src: url("/assets/font/neuemontreal-light-webfont.woff2") format("woff2"), url("/assets/font/neuemontreal-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neue_montrealmedium";
+  src: url("/assets/font/neuemontreal-medium-webfont.woff2") format("woff2"), url("/assets/font/neuemontreal-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neue_montrealregular";
+  src: url("/assets/font/neuemontreal-regular-webfont.woff2") format("woff2"), url("/assets/font/neuemontreal-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "neue_montrealmedium";
+  font-size: 24px;
+  color: #2c3838;
+  background: linear-gradient(180deg, #f6f8f8 0%, #d8dde2 100%);
+  scroll-behavior: smooth;
+}
+
+.d-flex {
+  display: flex;
+}
+.d-flex--row {
+  flex-direction: row;
+}
+.d-flex--row-reverse {
+  flex-direction: row-reverse;
+}
+.d-flex--column {
+  flex-direction: column;
+}
+.d-flex--column-reverse {
+  flex-direction: column-reverse;
+}
+.d-flex--around {
+  justify-content: space-around;
+}
+.d-flex--between {
+  justify-content: space-between;
+}
+.d-flex--start {
+  justify-content: flex-start;
+}
+.d-flex--center {
+  justify-content: center;
+}
+.d-flex--end {
+  justify-content: flex-end;
+}
+.d-flex--align-start {
+  align-items: flex-start;
+}
+.d-flex--align-center {
+  align-items: center;
+}
+.d-flex--align-end {
+  align-items: flex-end;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.container {
+  max-width: 1440px;
+  padding-inline: 48px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.bg-dark {
+  background-color: #26292a;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 20px;
+  font-family: "neue_montrealmedium";
+  padding: 19px 44px;
+  text-decoration: none;
+  color: #2c3838;
+  border-radius: 32px;
+  transition: all 100ms ease;
+}
+.btn--outline {
+  outline: 2px solid #2c3838;
+}
+.btn--outline:hover {
+  color: #ffffff;
+  background-color: #759191;
+  outline: none;
+}
+.btn--circle {
+  width: 56px;
+  height: 56px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: #000000;
+}
+.btn--circle-outline {
+  width: 56px;
+  height: 56px;
+  padding: 18px;
+  outline: 1px solid #6b6b6b;
+  border-radius: 50%;
+  color: #000000;
+}
+.btn--circle-outline:hover {
+  color: #ffffff;
+  background-color: #759191;
+  outline: none;
+}
+.btn--primary {
+  background: linear-gradient(180deg, #92b1b1 0%, #709999 100%);
+  color: #ffffff;
+}
+.btn--primary:hover {
+  background: linear-gradient(180deg, #aed6d6 0%, #477878 100%);
+}
+
+@media (max-width: 768px) {
+  .btn {
+    display: inline-block;
+    font-size: 18px;
+    font-family: "neue_montrealmedium";
+    padding: 16px 40px;
+    text-decoration: none;
+    color: #2c3838;
+    border-radius: 32px;
+  }
+  .btn--outline {
+    outline: 2px solid #2c3838;
+  }
+  .btn--outline:hover {
+    color: #ffffff;
+    background-color: #759191;
+    outline: none;
+  }
+  .btn--circle {
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: #000000;
+  }
+  .btn--circle-outline {
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+    outline: 1px solid #6b6b6b;
+    border-radius: 50%;
+    color: #000000;
+  }
+  .btn--circle-outline:hover {
+    color: #ffffff;
+    background-color: #759191;
+    outline: none;
+  }
+  .btn--primary {
+    background: linear-gradient(180deg, #92b1b1 0%, #709999 100%);
+    color: #ffffff;
+  }
+}
+@media (max-width: 576px) {
+  .btn {
+    display: inline-block;
+    font-size: 16px;
+    font-family: "neue_montrealmedium";
+    padding: 16px 38px;
+    text-decoration: none;
+    color: #2c3838;
+    border-radius: 32px;
+  }
+  .btn--outline {
+    outline: 2px solid #2c3838;
+  }
+  .btn--outline:hover {
+    color: #ffffff;
+    background-color: #759191;
+    outline: none;
+  }
+  .btn--circle {
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: #000000;
+  }
+  .btn--circle-outline {
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+    outline: 1px solid #6b6b6b;
+    border-radius: 50%;
+    color: #000000;
+  }
+  .btn--circle-outline:hover {
+    color: #ffffff;
+    background-color: #759191;
+    outline: none;
+  }
+  .btn--primary {
+    background: linear-gradient(180deg, #92b1b1 0%, #416e6e 100%);
+    color: #ffffff;
+  }
+}
+.heading-content {
+  display: flex;
+  align-items: flex-end;
+}
+.heading-content .heading-text {
+  font-family: "neue_montrealmedium";
+  font-size: 72px;
+  color: #2c3838;
+  line-height: 110%;
+}
+.heading-content .desc-text {
+  font-family: "neue_montrealregular";
+  font-size: 16px;
+  color: #6b6b6b;
+  line-height: 156%;
+}
+
+.navbar {
+  position: relative;
+  flex-wrap: wrap;
+  padding: 16px 0;
+  z-index: 99;
+}
+.navbar#navbar {
+  position: sticky;
+  top: 0;
+  background-color: #eff0f1;
+}
+.navbar .navbar-inner {
+  flex-wrap: inherit;
+}
+.navbar .navbar-inner .navbar-brand {
+  font-size: 24px;
+  font-family: "neue_montrealbold";
+  text-decoration: none;
+  color: #2c3838;
+  gap: 8px;
+}
+.navbar .navbar-inner .navbar-brand img {
+  width: 37px;
+  height: 37px;
+  object-fit: cover;
+}
+.navbar .navbar-inner .navbar-collapse .navbar-menu {
+  align-items: center;
+  gap: 40px;
+}
+.navbar .navbar-inner .navbar-collapse .navbar-menu .nav-link {
+  display: flex;
+  cursor: pointer;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+.navbar .navbar-inner .navbar-collapse .navbar-menu .nav-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.navbar .navbar-inner .navbar-collapse.active {
+  height: 240px;
+}
+.navbar .navbar-inner .navbar-collapse.active .navbar-menu {
+  opacity: 1;
+}
+.navbar .navbar-inner .navbar-toggler {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.navbar .navbar-inner .navbar-toggler .navbar-toggler-icon {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  vertical-align: middle;
+  background-image: url("/assets/images/nav-toggler.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 20px;
+  }
+  .navbar .navbar-inner .navbar-collapse {
+    height: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #eff0f1;
+    transition: all 300ms ease;
+    overflow: hidden;
+  }
+  .navbar .navbar-inner .navbar-collapse .navbar-menu {
+    flex-direction: column;
+    gap: 20px !important;
+    width: fit-content;
+    margin: 40px auto;
+    text-align: center;
+    transition: all 500ms ease;
+    opacity: 0;
+  }
+  .navbar .navbar-inner .navbar-collapse .navbar-menu .nav-link:hover {
+    color: #ffffff;
+  }
+  .navbar .navbar-inner .navbar-toggler {
+    display: block;
+  }
+  .navbar .navbar-inner .navbar-toggler .navbar-toggler-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .navbar .navbar-inner .navbar-brand {
+    font-size: 20px;
+    font-family: "neue_montrealbold";
+    text-decoration: none;
+    color: #2c3838;
+    gap: 8px;
+  }
+  .navbar .navbar-inner .navbar-brand img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+  }
+  .navbar .navbar-inner .navbar-collapse {
+    height: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #eff0f1;
+    transition: all 300ms ease;
+    overflow: hidden;
+  }
+  .navbar .navbar-inner .navbar-collapse .navbar-menu {
+    flex-direction: column;
+    gap: 20px !important;
+    width: fit-content;
+    margin: 40px auto;
+    text-align: center;
+    transition: all 500ms ease;
+    opacity: 0;
+  }
+  .navbar .navbar-inner .navbar-collapse .navbar-menu .nav-link:hover {
+    color: #ffffff;
+  }
+  .navbar .navbar-inner .navbar-toggler {
+    display: block;
+  }
+  .navbar .navbar-inner .navbar-toggler .navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+.hero {
+  gap: 134px;
+  padding-bottom: 120px;
+  padding-top: 60px;
+}
+.hero .heading-content {
+  align-items: flex-start;
+}
+.hero .heading-content .wrap {
+  gap: 8px;
+  margin-bottom: 43px;
+}
+.hero .heading-content .heading-text {
+  font-family: "neue_montrealregular";
+  font-size: 112px;
+}
+.hero .heading-content .heading-text span {
+  color: #759191;
+}
+.hero .heading-content .card {
+  margin-top: 100px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #293131 0%, #515152 100%);
+}
+.hero .heading-content .card .card-img-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 201px;
+}
+.hero .heading-content .card .btn--link {
+  font-family: "neue_montrealregular";
+  font-size: 20px;
+  padding: unset;
+  display: flex;
+  justify-content: space-between;
+  background-color: #759191;
+  border-radius: 0 0 32px 32px;
+  padding: 22px 38px;
+  color: #ffffff;
+}
+.hero .heading-content .card .btn--link span {
+  vertical-align: middle;
+}
+.hero .heading-content .card .card-body {
+  padding-inline: 38px;
+  padding-top: 95px;
+  margin-bottom: 24px;
+}
+.hero .heading-content .card .card-body .heading-text {
+  font-size: 58px;
+  color: #ffffff;
+  margin-right: 64px;
+}
+.hero .heading-content .card .card-body .heading-text sup {
+  font-size: 40px;
+}
+.hero .heading-content .card .card-body .desc-text {
+  font-size: 20px;
+  max-width: 152px;
+  line-height: unset;
+  color: #ffffff;
+}
+.hero .content .wrap-img .img-hero {
+  max-width: 770px;
+}
+.hero .content .wrap-img .heading-text {
+  font-size: 45.5px;
+  font-family: "neue_montrealregular";
+}
+.hero .content .wrap-img .heading-text .line {
+  margin-top: 10px;
+  margin-left: 17px;
+  width: 86px;
+  height: 2px;
+  background: radial-gradient(50% 50% at 50% 50%, #2c3838 0%, rgba(44, 56, 56, 0) 100%);
+}
+.hero .content .wrap-img .heading-text.mod-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.hero .content .wrap-img .heading-text.mod-2 {
+  position: absolute;
+  top: 48px;
+  right: 0;
+}
+.hero .content .wrap-img .wrap {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+}
+.hero .content .wrap-img .wrap img {
+  max-width: 31px;
+}
+.hero .content .wrap-img .wrap img:nth-child(1) {
+  margin-bottom: 16px;
+}
+.hero .content .wrap-img .wrap .line {
+  width: 1px;
+  height: 98px;
+  border-radius: 24px;
+  background: radial-gradient(50% 50% at 50% 50%, #2c3838 0%, rgba(44, 56, 56, 0.16) 100%);
+  margin-block: 12px;
+}
+.hero .content .wrap-img .wrap .desc-text {
+  font-size: 16px;
+}
+.hero .content .wrap-img .img-card {
+  position: absolute;
+  bottom: -54px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 276.08px;
+}
+.hero .content .wrap-img .icon-arrow {
+  position: absolute;
+  max-width: 24px;
+  right: 48px;
+  bottom: 65px;
+}
+.hero .content .wrap-text {
+  margin-top: 116px;
+}
+.hero .content .wrap-text .desc-text {
+  font-family: "neue_montrealregular";
+  font-size: 16px;
+  max-width: 392px;
+  color: #6b6b6b;
+  margin-right: 68px;
+  line-height: 156%;
+}
+.hero .content .wrap-text .desc-text span {
+  font-family: "neue_montrealmedium";
+  color: #000000;
+}
+.hero .content .wrap-text .experient .description .profile {
+  margin-right: 19px;
+}
+.hero .content .wrap-text .experient .description .profile .img-profile {
+  width: 56px;
+  z-index: 1;
+}
+.hero .content .wrap-text .experient .description .profile .btn--circle-outline {
+  margin-left: -16px;
+}
+.hero .content .wrap-text .experient .description .profile .btn--circle-outline img {
+  width: 24px;
+}
+.hero .content .wrap-text .experient .description .desc-text {
+  font-family: "neue_montrealmedium";
+  color: #000000;
+  font-size: 20px;
+  max-width: 157px;
+  line-height: unset;
+  margin-right: unset;
+}
+.hero .content .wrap-text .experient .wrap-star {
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    gap: 80px;
+    padding-bottom: 120px;
+  }
+  .hero .heading-content .wrap {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .hero .heading-content .wrap img {
+    height: 38px;
+  }
+  .hero .heading-content .heading-text {
+    font-family: "neue_montrealregular";
+    font-size: 82px;
+  }
+  .hero .heading-content .card {
+    margin-top: 90px;
+  }
+  .hero .heading-content .card .card-img-top {
+    top: 0;
+    left: 50%;
+    max-width: 150px;
+  }
+  .hero .heading-content .card .btn--link {
+    padding: 16px;
+    font-size: 16px;
+  }
+  .hero .heading-content .card .btn--link span {
+    font-size: 20px;
+  }
+  .hero .heading-content .card .card-body {
+    padding-inline: 16px;
+    padding-top: 68px;
+    margin-bottom: 18px;
+  }
+  .hero .heading-content .card .card-body .heading-text {
+    font-size: 52px;
+    margin-right: 24px;
+  }
+  .hero .heading-content .card .card-body .heading-text sup {
+    font-size: 30px;
+  }
+  .hero .heading-content .card .card-body .desc-text {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .hero .content .wrap-img .img-hero {
+    max-width: 520px;
+  }
+  .hero .content .wrap-img .heading-text {
+    font-size: 27.5px;
+  }
+  .hero .content .wrap-img .heading-text .line {
+    margin-top: unset;
+    margin-left: 17px;
+    width: 60px;
+    height: 2px;
+  }
+  .hero .content .wrap-img .heading-text.mod-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .hero .content .wrap-img .heading-text.mod-2 {
+    position: absolute;
+    top: 38px;
+    right: 0;
+  }
+  .hero .content .wrap-img .wrap {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+  }
+  .hero .content .wrap-img .wrap img {
+    max-width: 24px;
+  }
+  .hero .content .wrap-img .wrap img:nth-child(1) {
+    margin-bottom: 12px;
+  }
+  .hero .content .wrap-img .wrap .line {
+    width: 1.5px;
+    height: 58px;
+    margin-block: 8px;
+  }
+  .hero .content .wrap-img .wrap .desc-text {
+    font-size: 16px;
+  }
+  .hero .content .wrap-img .img-card {
+    bottom: -26px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 182px;
+  }
+  .hero .content .wrap-img .icon-arrow {
+    position: absolute;
+    max-width: 20px;
+    right: 30px;
+    bottom: 54px;
+  }
+  .hero .content .wrap-text {
+    margin-top: 116px;
+    align-items: center;
+  }
+  .hero .content .wrap-text .desc-text {
+    font-size: 16px;
+    max-width: 392px;
+    margin-right: 28px;
+    line-height: 156%;
+  }
+  .hero .content .wrap-text .experient .description .profile {
+    margin-right: 8px;
+  }
+  .hero .content .wrap-text .experient .description .profile .img-profile {
+    width: 42px;
+  }
+  .hero .content .wrap-text .experient .description .profile .btn--circle-outline {
+    margin-left: -16px;
+    width: 44px;
+    height: 44px;
+    padding: 12px 14px;
+  }
+  .hero .content .wrap-text .experient .description .profile .btn--circle-outline img {
+    width: 18px;
+  }
+  .hero .content .wrap-text .experient .description .desc-text {
+    font-size: 14px;
+    max-width: unset;
+    line-height: unset;
+    margin-right: unset;
+  }
+  .hero .content .wrap-text .experient .wrap-star {
+    gap: 16px;
+    margin-top: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .hero {
+    gap: 80px;
+    padding-bottom: 120px;
+  }
+  .hero .heading-content .wrap {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .hero .heading-content .wrap img {
+    height: 38px;
+  }
+  .hero .heading-content .heading-text {
+    font-family: "neue_montrealregular";
+    font-size: 82px;
+  }
+  .hero .heading-content .card {
+    margin-top: 90px;
+  }
+  .hero .heading-content .card .card-img-top {
+    top: 0;
+    left: 50%;
+    max-width: 150px;
+  }
+  .hero .heading-content .card .btn--link {
+    padding: 16px;
+    font-size: 16px;
+  }
+  .hero .heading-content .card .btn--link span {
+    font-size: 20px;
+  }
+  .hero .heading-content .card .card-body {
+    padding-inline: 16px;
+    padding-top: 68px;
+    margin-bottom: 18px;
+  }
+  .hero .heading-content .card .card-body .heading-text {
+    font-size: 52px;
+    margin-right: 24px;
+  }
+  .hero .heading-content .card .card-body .heading-text sup {
+    font-size: 30px;
+  }
+  .hero .heading-content .card .card-body .desc-text {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .hero .content .wrap-img .img-hero {
+    max-width: 520px;
+  }
+  .hero .content .wrap-img .heading-text {
+    font-size: 27.5px;
+  }
+  .hero .content .wrap-img .heading-text .line {
+    margin-top: unset;
+    margin-left: 17px;
+    width: 60px;
+    height: 2px;
+  }
+  .hero .content .wrap-img .heading-text.mod-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .hero .content .wrap-img .heading-text.mod-2 {
+    position: absolute;
+    top: 38px;
+    right: 0;
+  }
+  .hero .content .wrap-img .wrap {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+  }
+  .hero .content .wrap-img .wrap img {
+    max-width: 24px;
+  }
+  .hero .content .wrap-img .wrap img:nth-child(1) {
+    margin-bottom: 12px;
+  }
+  .hero .content .wrap-img .wrap .line {
+    width: 1.5px;
+    height: 58px;
+    margin-block: 8px;
+  }
+  .hero .content .wrap-img .wrap .desc-text {
+    font-size: 16px;
+  }
+  .hero .content .wrap-img .img-card {
+    bottom: -26px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 182px;
+  }
+  .hero .content .wrap-img .icon-arrow {
+    position: absolute;
+    max-width: 20px;
+    right: 30px;
+    bottom: 54px;
+  }
+  .hero .content .wrap-text {
+    margin-top: 106px;
+    align-items: center;
+  }
+  .hero .content .wrap-text .desc-text {
+    font-size: 16px;
+    max-width: 392px;
+    margin-right: 28px;
+    line-height: 156%;
+  }
+  .hero .content .wrap-text .experient .description .profile {
+    margin-right: 8px;
+  }
+  .hero .content .wrap-text .experient .description .profile .img-profile {
+    width: 42px;
+  }
+  .hero .content .wrap-text .experient .description .profile .btn--circle-outline {
+    margin-left: -16px;
+    width: 44px;
+    height: 44px;
+    padding: 12px 14px;
+  }
+  .hero .content .wrap-text .experient .description .profile .btn--circle-outline img {
+    width: 18px;
+  }
+  .hero .content .wrap-text .experient .description .desc-text {
+    font-size: 14px;
+    max-width: unset;
+    line-height: unset;
+    margin-right: unset;
+  }
+  .hero .content .wrap-text .experient .wrap-star {
+    gap: 16px;
+    margin-top: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    gap: 80px;
+    padding-bottom: 120px;
+    flex-direction: column;
+  }
+  .hero .heading-content .wrap {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .hero .heading-content .wrap img {
+    height: 38px;
+  }
+  .hero .heading-content .heading-text {
+    font-family: "neue_montrealregular";
+    font-size: 82px;
+  }
+  .hero .heading-content .card {
+    margin-top: 80px;
+  }
+  .hero .heading-content .card .card-img-top {
+    top: 0;
+    left: 50%;
+    max-width: 150px;
+  }
+  .hero .heading-content .card .btn--link {
+    padding: 16px;
+    font-size: 16px;
+  }
+  .hero .heading-content .card .btn--link span {
+    font-size: 20px;
+  }
+  .hero .heading-content .card .card-body {
+    padding-inline: 16px;
+    padding-top: 68px;
+    margin-bottom: 18px;
+  }
+  .hero .heading-content .card .card-body .heading-text {
+    font-size: 52px;
+    margin-right: 24px;
+  }
+  .hero .heading-content .card .card-body .heading-text sup {
+    font-size: 30px;
+  }
+  .hero .heading-content .card .card-body .desc-text {
+    font-size: 18px;
+    max-width: 205px;
+  }
+  .hero .content .wrap-img {
+    display: none;
+  }
+  .hero .content .wrap-text {
+    margin-top: unset;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .hero .content .wrap-text .desc-text {
+    font-size: 16px;
+    max-width: 392px;
+    margin-right: unset;
+    margin-bottom: 30px;
+    line-height: 156%;
+  }
+  .hero .content .wrap-text .experient .description {
+    margin-bottom: 30px;
+  }
+  .hero .content .wrap-text .experient .description .profile {
+    margin-right: 8px;
+  }
+  .hero .content .wrap-text .experient .description .profile .img-profile {
+    width: 42px;
+  }
+  .hero .content .wrap-text .experient .description .profile .btn--circle-outline {
+    margin-left: -16px;
+    width: 44px;
+    height: 44px;
+    padding: 12px 14px;
+  }
+  .hero .content .wrap-text .experient .description .profile .btn--circle-outline img {
+    width: 18px;
+  }
+  .hero .content .wrap-text .experient .description .desc-text {
+    font-size: 16px;
+    max-width: 160px;
+    line-height: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+  }
+  .hero .content .wrap-text .experient .wrap-star {
+    gap: 16px;
+    margin-top: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .hero {
+    gap: 60px;
+    padding-bottom: 120px;
+    padding-top: 40px;
+    flex-direction: column;
+  }
+  .hero .heading-content .wrap {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .hero .heading-content .wrap img {
+    height: 30px;
+  }
+  .hero .heading-content .heading-text {
+    font-family: "neue_montrealregular";
+    font-size: 68px;
+  }
+  .hero .heading-content .card {
+    margin-top: 80px;
+  }
+  .hero .heading-content .card .card-img-top {
+    top: 0;
+    left: 50%;
+    max-width: 150px;
+  }
+  .hero .heading-content .card .btn--link {
+    padding: 16px;
+    font-size: 16px;
+  }
+  .hero .heading-content .card .btn--link span {
+    font-size: 20px;
+  }
+  .hero .heading-content .card .card-body {
+    padding-inline: 16px;
+    padding-top: 68px;
+    margin-bottom: 18px;
+  }
+  .hero .heading-content .card .card-body .heading-text {
+    font-size: 48px;
+    margin-right: 24px;
+  }
+  .hero .heading-content .card .card-body .heading-text sup {
+    font-size: 30px;
+  }
+  .hero .heading-content .card .card-body .desc-text {
+    font-size: 16px;
+    max-width: 205px;
+  }
+  .hero .content .wrap-img {
+    display: none;
+  }
+  .hero .content .wrap-text {
+    margin-top: unset;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .hero .content .wrap-text .desc-text {
+    font-size: 16px;
+    max-width: 392px;
+    margin-right: unset;
+    margin-bottom: 30px;
+    line-height: 156%;
+  }
+  .hero .content .wrap-text .experient .description {
+    margin-bottom: 30px;
+  }
+  .hero .content .wrap-text .experient .description .profile {
+    margin-right: 8px;
+  }
+  .hero .content .wrap-text .experient .description .profile .img-profile {
+    width: 42px;
+  }
+  .hero .content .wrap-text .experient .description .profile .btn--circle-outline {
+    margin-left: -16px;
+    width: 44px;
+    height: 44px;
+    padding: 12px 14px;
+  }
+  .hero .content .wrap-text .experient .description .profile .btn--circle-outline img {
+    width: 18px;
+  }
+  .hero .content .wrap-text .experient .description .desc-text {
+    font-size: 16px;
+    max-width: 160px;
+    line-height: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+  }
+  .hero .content .wrap-text .experient .wrap-star {
+    gap: 16px;
+    margin-top: 16px;
+  }
+}
+.variety .content {
+  gap: 94px;
+}
+.variety .content .btn-mobile {
+  display: none;
+}
+.variety .content .wrap-img .img-variety {
+  max-width: 540px;
+}
+.variety .content .wrap-img .btn--link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 0;
+  color: #759191;
+  text-decoration: underline;
+  font-family: "neue_montrealregular";
+}
+.variety .content .wrap-img .btn--link span {
+  vertical-align: middle;
+  margin-left: 24px;
+}
+.variety .content .wrap {
+  gap: 24px;
+  margin-top: 76px;
+}
+.variety .content .wrap img {
+  width: 56px;
+  object-fit: cover;
+}
+.variety .content .wrap .wrap-text .name {
+  font-size: 20px;
+  color: #000000;
+  font-family: "neue_montrealregular";
+}
+.variety .content .wrap .wrap-text .job {
+  font-family: "neue_montrealmedium";
+  color: #6b6b6b;
+  font-size: 16px;
+}
+.variety .content .wrap-bg {
+  position: absolute;
+  top: 50%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+}
+.variety .content .wrap-bg img {
+  max-width: 762px;
+}
+.variety .content .wrap-bg .desc-title {
+  position: absolute;
+  top: 24px;
+  left: 29px;
+  color: #759191;
+  font-size: 14px;
+  font-family: "neue_montrealmedium";
+  gap: 12px;
+}
+.variety .content .wrap-bg .desc-title .circle {
+  width: 10px;
+  height: 10px;
+  background-color: #759191;
+  border-radius: 50%;
+}
+.variety .content .wrap-bg .heading-text {
+  position: absolute;
+  top: 43px;
+  left: 29px;
+  font-family: "neue_montrealregular";
+  font-size: 72px;
+  line-height: 110%;
+}
+.variety .year {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 16px;
+  font-family: "neue_montrealmedium";
+}
+
+@media (max-width: 1200px) {
+  .variety .content {
+    gap: 94px;
+  }
+  .variety .content .wrap-img .img-variety {
+    max-width: 440px;
+  }
+  .variety .content .wrap-img .btn--link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 0;
+    color: #759191;
+    font-size: 18px;
+    padding-block: 16px;
+    text-decoration: underline;
+    font-family: "neue_montrealregular";
+  }
+  .variety .content .wrap-img .btn--link span {
+    vertical-align: middle;
+    margin-left: 24px;
+    font-size: 20px;
+  }
+  .variety .content .wrap {
+    gap: 24px;
+    margin-top: 76px;
+  }
+  .variety .content .wrap img {
+    width: 44px;
+    object-fit: cover;
+  }
+  .variety .content .wrap .wrap-text .name {
+    font-size: 18px;
+    color: #000000;
+    font-family: "neue_montrealregular";
+  }
+  .variety .content .wrap .wrap-text .job {
+    font-family: "neue_montrealmedium";
+    color: #6b6b6b;
+    font-size: 14px;
+  }
+  .variety .content .wrap-bg {
+    position: absolute;
+    top: 50%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+  }
+  .variety .content .wrap-bg img {
+    max-width: 482px;
+  }
+  .variety .content .wrap-bg .desc-title {
+    position: absolute;
+    top: 20px;
+    left: 29px;
+    color: #759191;
+    font-size: 14px;
+    font-family: "neue_montrealmedium";
+    gap: 12px;
+  }
+  .variety .content .wrap-bg .desc-title .circle {
+    width: 10px;
+    height: 10px;
+    background-color: #759191;
+    border-radius: 50%;
+  }
+  .variety .content .wrap-bg .heading-text {
+    position: absolute;
+    top: 43px;
+    left: 29px;
+    font-family: "neue_montrealregular";
+    font-size: 44px;
+    line-height: 95%;
+  }
+  .variety .year {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+    font-family: "neue_montrealmedium";
+  }
+}
+@media (max-width: 992px) {
+  .variety .content {
+    gap: 94px;
+  }
+  .variety .content .wrap-img .img-variety {
+    max-width: 420px;
+  }
+  .variety .content .wrap-img .btn--link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 0;
+    color: #759191;
+    font-size: 18px;
+    padding-block: 16px;
+    text-decoration: underline;
+    font-family: "neue_montrealregular";
+  }
+  .variety .content .wrap-img .btn--link span {
+    vertical-align: middle;
+    margin-left: 24px;
+    font-size: 20px;
+  }
+  .variety .content .wrap {
+    gap: 24px;
+    margin-top: 76px;
+  }
+  .variety .content .wrap img {
+    width: 44px;
+    object-fit: cover;
+  }
+  .variety .content .wrap .wrap-text .name {
+    font-size: 18px;
+    color: #000000;
+    font-family: "neue_montrealregular";
+  }
+  .variety .content .wrap .wrap-text .job {
+    font-family: "neue_montrealmedium";
+    color: #6b6b6b;
+    font-size: 14px;
+  }
+  .variety .content .wrap-bg {
+    position: absolute;
+    top: 50%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+  }
+  .variety .content .wrap-bg img {
+    max-width: 482px;
+  }
+  .variety .content .wrap-bg .desc-title {
+    position: absolute;
+    top: 20px;
+    left: 29px;
+    color: #759191;
+    font-size: 14px;
+    font-family: "neue_montrealmedium";
+    gap: 12px;
+  }
+  .variety .content .wrap-bg .desc-title .circle {
+    width: 10px;
+    height: 10px;
+    background-color: #759191;
+    border-radius: 50%;
+  }
+  .variety .content .wrap-bg .heading-text {
+    position: absolute;
+    top: 43px;
+    left: 29px;
+    font-family: "neue_montrealregular";
+    font-size: 44px;
+    line-height: 95%;
+  }
+  .variety .year {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+    font-family: "neue_montrealmedium";
+  }
+}
+@media (max-width: 768px) {
+  .variety .content {
+    gap: 42px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .variety .content .btn--link {
+    position: unset;
+    bottom: 0;
+    right: 0;
+    padding-right: 0;
+    color: #759191;
+    font-size: 18px;
+    padding-block: 16px;
+    text-decoration: underline;
+    font-family: "neue_montrealregular";
+  }
+  .variety .content .btn--link span {
+    vertical-align: middle;
+    margin-left: 24px;
+    font-size: 20px;
+  }
+  .variety .content .btn-desktop {
+    display: none;
+  }
+  .variety .content .btn-mobile {
+    display: block;
+  }
+  .variety .content .wrap-img .img-variety {
+    display: none;
+    max-width: 420px;
+  }
+  .variety .content .wrap-img .btn--link {
+    position: unset;
+    bottom: 0;
+    right: 0;
+    padding-right: 0;
+    color: #759191;
+    font-size: 18px;
+    padding-block: 16px;
+    text-decoration: underline;
+    font-family: "neue_montrealregular";
+  }
+  .variety .content .wrap-img .btn--link span {
+    vertical-align: middle;
+    margin-left: 24px;
+    font-size: 20px;
+  }
+  .variety .content .wrap {
+    gap: 24px;
+    margin-top: unset;
+  }
+  .variety .content .wrap img {
+    width: 44px;
+    object-fit: cover;
+  }
+  .variety .content .wrap .wrap-text .name {
+    font-size: 18px;
+    color: #000000;
+    font-family: "neue_montrealregular";
+  }
+  .variety .content .wrap .wrap-text .job {
+    font-family: "neue_montrealmedium";
+    color: #6b6b6b;
+    font-size: 14px;
+  }
+  .variety .content .wrap-bg {
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: unset;
+  }
+  .variety .content .wrap-bg img {
+    max-width: 482px;
+  }
+  .variety .content .wrap-bg .desc-title {
+    position: absolute;
+    top: 20px;
+    left: 29px;
+    color: #759191;
+    font-size: 14px;
+    font-family: "neue_montrealmedium";
+    gap: 12px;
+  }
+  .variety .content .wrap-bg .desc-title .circle {
+    width: 10px;
+    height: 10px;
+    background-color: #759191;
+    border-radius: 50%;
+  }
+  .variety .content .wrap-bg .heading-text {
+    position: absolute;
+    top: 43px;
+    left: 29px;
+    font-family: "neue_montrealregular";
+    font-size: 44px;
+    line-height: 95%;
+  }
+  .variety .year {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+    font-family: "neue_montrealmedium";
+  }
+}
+@media (max-width: 576px) {
+  .variety .content {
+    gap: 42px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .variety .content .btn--link {
+    position: unset;
+    bottom: 0;
+    right: 0;
+    padding-right: 0;
+    color: #759191;
+    font-size: 18px;
+    padding-block: 16px;
+    text-decoration: underline;
+    font-family: "neue_montrealregular";
+    padding: unset;
+    padding-left: 10px;
+  }
+  .variety .content .btn--link span {
+    vertical-align: middle;
+    margin-left: 24px;
+    font-size: 20px;
+  }
+  .variety .content .btn-desktop {
+    display: none;
+  }
+  .variety .content .btn-mobile {
+    display: block;
+  }
+  .variety .content .wrap-img .img-variety {
+    display: none;
+    max-width: 420px;
+  }
+  .variety .content .wrap {
+    gap: 24px;
+    margin-top: unset;
+  }
+  .variety .content .wrap img {
+    width: 44px;
+    object-fit: cover;
+  }
+  .variety .content .wrap .wrap-text .name {
+    font-size: 18px;
+    color: #000000;
+    font-family: "neue_montrealregular";
+  }
+  .variety .content .wrap .wrap-text .job {
+    font-family: "neue_montrealmedium";
+    color: #6b6b6b;
+    font-size: 14px;
+  }
+  .variety .content .wrap-bg {
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: unset;
+  }
+  .variety .content .wrap-bg img {
+    max-width: 326px;
+  }
+  .variety .content .wrap-bg .desc-title {
+    position: absolute;
+    top: 10px;
+    left: 29px;
+    color: #759191;
+    font-size: 12px;
+    font-family: "neue_montrealmedium";
+    gap: 8px;
+  }
+  .variety .content .wrap-bg .desc-title .circle {
+    width: 8px;
+    height: 8px;
+    background-color: #759191;
+    border-radius: 50%;
+  }
+  .variety .content .wrap-bg .heading-text {
+    position: absolute;
+    top: 30px;
+    left: 29px;
+    font-family: "neue_montrealregular";
+    font-size: 28px;
+    line-height: 102%;
+  }
+  .variety .year {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+    font-family: "neue_montrealmedium";
+  }
+}
+.studies {
+  padding-top: 160px;
+}
+.studies .slider {
+  width: 100%;
+}
+.studies .slider::-webkit-scrollbar {
+  display: none;
+}
+.studies .card {
+  flex-shrink: 0;
+}
+.studies .card .date {
+  outline: 2px solid #ffffff;
+  border-radius: 56px;
+  padding: 6px 20px;
+  display: flex;
+}
+.studies .card .date span {
+  font-size: 14px;
+  color: #ffffff;
+}
+.studies .card--1 {
+  width: 425px;
+}
+.studies .card--1 .content .img-studies {
+  width: 100%;
+}
+.studies .card--1 .content .btn--circle {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+.studies .card--1 .content .date {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.studies .card--1 .content .heading-text {
+  font-size: 32px;
+  color: #2c3838;
+}
+.studies .card--1 .content .heading-text.mod-1 {
+  position: absolute;
+  bottom: 49px;
+  right: 0;
+}
+.studies .card--1 .content .heading-text.mod-2 {
+  position: absolute;
+  bottom: 0;
+  right: 54px;
+}
+.studies .card--2 {
+  width: 540px;
+}
+.studies .card--2 .content .img-studies {
+  width: 100%;
+}
+.studies .card--2 .content .btn--circle {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+.studies .card--2 .content .date {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+.studies .card--2 .content .heading-text {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  text-align: end;
+  max-width: 298px;
+  font-size: 32px;
+}
+.studies .card--3 {
+  width: 483px;
+}
+.studies .card--3 .content .img-studies {
+  width: 100%;
+}
+.studies .card--3 .content .heading-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 32px;
+  line-height: 140%;
+}
+.studies .card .heading-content {
+  align-items: flex-start;
+}
+.studies .card .heading-content .heading-text {
+  font-size: 72px;
+  margin-bottom: 72px;
+}
+.studies .card .heading-content .desc-text {
+  color: #6b6b6b;
+  margin-bottom: 78px;
+}
+.studies .wrap-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  gap: 35px;
+  z-index: 1;
+}
+.studies .wrap-btn .btn--circle-outline {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .studies {
+    padding-top: 160px;
+  }
+  .studies .slider {
+    width: 100%;
+  }
+  .studies .slider::-webkit-scrollbar {
+    display: none;
+  }
+  .studies .card {
+    flex-shrink: 0;
+  }
+  .studies .card .date {
+    outline: 2px solid #ffffff;
+    border-radius: 56px;
+    padding: 6px 20px;
+    display: flex;
+  }
+  .studies .card .date span {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  .studies .card--1 {
+    width: 425px;
+  }
+  .studies .card--1 .content .img-studies {
+    width: 100%;
+  }
+  .studies .card--1 .content .btn--circle {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+  }
+  .studies .card--1 .content .date {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+  .studies .card--1 .content .heading-text {
+    font-size: 32px;
+    color: #2c3838;
+  }
+  .studies .card--1 .content .heading-text.mod-1 {
+    position: absolute;
+    bottom: 49px;
+    right: 0;
+  }
+  .studies .card--1 .content .heading-text.mod-2 {
+    position: absolute;
+    bottom: 0;
+    right: 54px;
+  }
+  .studies .card--2 {
+    width: 540px;
+  }
+  .studies .card--2 .content .img-studies {
+    width: 100%;
+  }
+  .studies .card--2 .content .btn--circle {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+  }
+  .studies .card--2 .content .date {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+  }
+  .studies .card--2 .content .heading-text {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    text-align: end;
+    max-width: 298px;
+    font-size: 32px;
+  }
+  .studies .card--3 {
+    width: 483px;
+  }
+  .studies .card--3 .content .img-studies {
+    width: 100%;
+  }
+  .studies .card--3 .content .heading-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 32px;
+    line-height: 140%;
+  }
+  .studies .card .heading-content {
+    align-items: flex-start;
+  }
+  .studies .card .heading-content .heading-text {
+    font-size: 62px;
+    margin-bottom: 62px;
+  }
+  .studies .card .heading-content .desc-text {
+    color: #6b6b6b;
+    margin-bottom: 68px;
+  }
+  .studies .wrap-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    gap: 35px;
+    z-index: 1;
+  }
+  .studies .wrap-btn .btn--circle-outline {
+    cursor: pointer;
+  }
+}
+@media (max-width: 576px) {
+  .studies {
+    padding-top: 160px;
+  }
+  .studies .slider {
+    width: 100%;
+  }
+  .studies .slider::-webkit-scrollbar {
+    display: none;
+  }
+  .studies .card {
+    flex-shrink: 0;
+  }
+  .studies .card .date {
+    outline: 2px solid #ffffff;
+    border-radius: 56px;
+    padding: 6px 20px;
+    display: flex;
+  }
+  .studies .card .date span {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  .studies .card--1 {
+    width: 314px;
+  }
+  .studies .card--1 .content .img-studies {
+    width: 100%;
+  }
+  .studies .card--1 .content .btn--circle {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+  }
+  .studies .card--1 .content .date {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+  .studies .card--1 .content .heading-text {
+    font-size: 24px;
+    color: #2c3838;
+  }
+  .studies .card--1 .content .heading-text.mod-1 {
+    position: absolute;
+    bottom: 36px;
+    right: 0;
+  }
+  .studies .card--1 .content .heading-text.mod-2 {
+    position: absolute;
+    bottom: 0;
+    right: 32px;
+  }
+  .studies .card--2 {
+    width: 353px;
+  }
+  .studies .card--2 .content .img-studies {
+    width: 100%;
+  }
+  .studies .card--2 .content .btn--circle {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+  }
+  .studies .card--2 .content .date {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+  }
+  .studies .card--2 .content .heading-text {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    text-align: end;
+    max-width: 196px;
+    font-size: 21px;
+  }
+  .studies .card--3 {
+    width: 360px;
+  }
+  .studies .card--3 .content .img-studies {
+    width: 100%;
+  }
+  .studies .card--3 .content .heading-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 24px;
+    line-height: 140%;
+  }
+  .studies .card .heading-content {
+    align-items: flex-start;
+  }
+  .studies .card .heading-content .heading-text {
+    font-size: 42px;
+    margin-bottom: 42px;
+  }
+  .studies .card .heading-content .desc-text {
+    color: #6b6b6b;
+    margin-bottom: 48px;
+  }
+  .studies .wrap-btn {
+    margin-top: 20px;
+    position: unset;
+    gap: 35px;
+    z-index: 1;
+  }
+  .studies .wrap-btn .btn--circle-outline {
+    cursor: pointer;
+  }
+}
+.collaborating {
+  padding-block: 160px;
+}
+.collaborating .heading-content {
+  margin-bottom: 57px;
+}
+.collaborating .heading-content .heading-text {
+  max-width: 617px;
+}
+.collaborating .heading-content .desc-text {
+  max-width: 392px;
+}
+.collaborating .content {
+  margin-bottom: 88px;
+}
+.collaborating .content .wrap {
+  position: relative;
+  cursor: pointer;
+}
+.collaborating .content .wrap .img-hover {
+  width: 453px;
+  right: 330px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  transform: scale(0);
+  transition: all 200ms ease;
+  z-index: 1;
+}
+.collaborating .content .wrap:hover .img-hover {
+  transform: scale(1);
+}
+.collaborating .content .box {
+  align-items: flex-end;
+  padding-block: 40px;
+  background-image: linear-gradient(to right, #b1b1b1 40%, rgba(255, 255, 255, 0) 20%);
+  background-position: bottom;
+  background-size: 26px 2px;
+  background-repeat: repeat-x;
+}
+.collaborating .content .box .heading-text {
+  font-size: 96px;
+  font-family: "neue_montrealmedium";
+}
+.collaborating .content .box .desc-text {
+  max-width: 157px;
+  font-size: 20px;
+}
+
+@media (max-width: 1200px) {
+  .collaborating {
+    padding-block: 160px;
+  }
+  .collaborating .heading-content {
+    margin-bottom: 57px;
+  }
+  .collaborating .heading-content .heading-text {
+    max-width: 617px;
+    font-size: 62px;
+  }
+  .collaborating .heading-content .desc-text {
+    max-width: 392px;
+  }
+  .collaborating .content {
+    margin-bottom: 88px;
+  }
+  .collaborating .content .wrap {
+    position: relative;
+    cursor: pointer;
+  }
+  .collaborating .content .wrap .img-hover {
+    width: 360px;
+    right: 330px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    transition: all 200ms ease;
+    z-index: 1;
+  }
+  .collaborating .content .wrap:hover .img-hover {
+    transform: scale(1);
+  }
+  .collaborating .content .box {
+    align-items: flex-end;
+    padding-block: 40px;
+    background-image: linear-gradient(to right, #b1b1b1 40%, rgba(255, 255, 255, 0) 20%);
+    background-position: bottom;
+    background-size: 26px 2px;
+    background-repeat: repeat-x;
+  }
+  .collaborating .content .box .heading-text {
+    font-size: 72px;
+    font-family: "neue_montrealmedium";
+  }
+  .collaborating .content .box .desc-text {
+    max-width: 157px;
+  }
+}
+@media (max-width: 768px) {
+  .collaborating {
+    padding-block: 160px;
+  }
+  .collaborating .heading-content {
+    margin-bottom: 57px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+  }
+  .collaborating .heading-content .heading-text {
+    max-width: 100%;
+    font-size: 62px;
+  }
+  .collaborating .heading-content .desc-text {
+    max-width: 100%;
+  }
+  .collaborating .content {
+    margin-bottom: 48px;
+  }
+  .collaborating .content .wrap {
+    position: relative;
+    cursor: pointer;
+  }
+  .collaborating .content .wrap .img-hover {
+    display: none;
+    width: 360px;
+    right: 330px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    transition: all 200ms ease;
+    z-index: 1;
+  }
+  .collaborating .content .wrap:hover {
+    background-color: #759191;
+  }
+  .collaborating .content .wrap:hover .box {
+    color: #ffffff;
+  }
+  .collaborating .content .box {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding-block: 40px;
+    background-image: linear-gradient(to right, #b1b1b1 40%, rgba(255, 255, 255, 0) 20%);
+    background-position: bottom;
+    background-size: 26px 2px;
+    background-repeat: repeat-x;
+    transition: all 300ms ease;
+  }
+  .collaborating .content .box .heading-text {
+    font-size: 72px;
+    font-family: "neue_montrealmedium";
+  }
+  .collaborating .content .box .desc-text {
+    max-width: 157px;
+  }
+}
+@media (max-width: 576px) {
+  .collaborating {
+    padding-block: 160px;
+  }
+  .collaborating .heading-content {
+    margin-bottom: 57px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+  }
+  .collaborating .heading-content .heading-text {
+    max-width: 100%;
+    font-size: 42px;
+  }
+  .collaborating .heading-content .desc-text {
+    max-width: 100%;
+  }
+  .collaborating .content {
+    margin-bottom: 48px;
+  }
+  .collaborating .content .wrap {
+    position: relative;
+    cursor: pointer;
+  }
+  .collaborating .content .wrap .img-hover {
+    display: none;
+    width: 360px;
+    right: 330px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    transition: all 200ms ease;
+    z-index: 1;
+  }
+  .collaborating .content .wrap:hover {
+    background-color: #759191;
+  }
+  .collaborating .content .wrap:hover .box {
+    color: #ffffff;
+  }
+  .collaborating .content .box {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding-block: 30px;
+    background-image: linear-gradient(to right, #b1b1b1 40%, rgba(255, 255, 255, 0) 20%);
+    background-position: bottom;
+    background-size: 26px 1px;
+    background-repeat: repeat-x;
+    transition: all 300ms ease;
+  }
+  .collaborating .content .box .heading-text {
+    font-size: 34px;
+    font-family: "neue_montrealmedium";
+  }
+  .collaborating .content .box .desc-text {
+    font-size: 16px;
+    max-width: 157px;
+  }
+}
+.finance {
+  padding-bottom: 160px;
+}
+.finance .heading-content {
+  align-items: flex-start;
+}
+.finance .heading-content .wrap {
+  gap: 8px;
+  max-height: 42px;
+  margin-bottom: 48px;
+}
+.finance .heading-content .heading-text {
+  max-width: 516px;
+  margin-bottom: 99px;
+}
+.finance .heading-content .desc-text {
+  max-width: 392px;
+  margin-bottom: 111px;
+}
+.finance .content .wrapper.mt-minus {
+  margin-top: -80px;
+}
+.finance .content .wrapper .card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 32px;
+}
+.finance .content .wrapper .card .wrap-text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.finance .content .wrapper .card .wrap-text .heading-text {
+  font-family: "neue_montrealbold";
+  font-size: 24px;
+  color: #000000;
+}
+.finance .content .wrapper .card .wrap-text .desc-text {
+  font-family: "neue_montrealmedium";
+  font-size: 14px;
+  color: #6b6b6b;
+}
+.finance .content .wrapper .card .wrap-grap {
+  gap: 20px;
+}
+.finance .content .wrapper .card .wrap-grap .line-grap {
+  width: 8px;
+  background: rgb(184, 203, 204);
+  background: linear-gradient(180deg, rgb(184, 203, 204) 0%, rgb(113, 153, 153) 100%);
+  border-radius: 32px;
+}
+.finance .content .wrapper .card .wrap-grap .line-grap:nth-child(1) {
+  height: 100px;
+}
+.finance .content .wrapper .card .wrap-grap .line-grap:nth-child(2) {
+  height: 67px;
+}
+.finance .content .wrapper .card .wrap-grap .line-grap:nth-child(3) {
+  height: 136px;
+}
+.finance .content .wrapper .card .wrap-grap .line-grap:nth-child(4) {
+  height: 49px;
+}
+.finance .content .wrapper .card .wrap-grap .line-grap:nth-child(5) {
+  height: 100px;
+}
+.finance .content .wrapper .card .wrap-grap .line-grap:nth-child(6) {
+  height: 67px;
+}
+.finance .content .wrapper .card .wrap-grap .line-grap:nth-child(7) {
+  height: 49px;
+}
+.finance .content .wrapper .img-handCard {
+  margin-left: 50px;
+  max-width: 481.53px;
+}
+.finance .content .wrapper .img-wrap .wrap-text {
+  position: absolute;
+  top: 0;
+  right: 20.5px;
+}
+.finance .content .wrapper .img-wrap .wrap-text .heading-text {
+  font-size: 64px;
+  font-family: "neue_montrealregular";
+}
+.finance .content .wrapper .img-wrap .wrap-text .heading-text sup {
+  font-size: 20px;
+  line-height: 120%;
+  margin-left: 3px;
+}
+.finance .content .wrapper .img-wrap .wrap-text .desc-text {
+  font-family: "neue_montrealregular";
+  font-size: 16px;
+  max-width: 109px;
+  margin-left: 8px;
+}
+.finance .content .wrapper .card-income {
+  max-width: 425px;
+  margin-left: 86px;
+  margin-right: 81px;
+}
+.finance .content .wrapper .wrap .icon-income {
+  max-width: 56px;
+  position: absolute;
+  top: 32px;
+  left: 118px;
+}
+.finance .content .wrapper .wrap .wrap-text {
+  position: absolute;
+  top: 162px;
+  left: 118px;
+}
+.finance .content .wrapper .wrap .wrap-text .heading-text {
+  font-family: "neue_montrealregular";
+  font-size: 56px;
+  color: #ffffff;
+}
+.finance .content .wrapper .wrap .wrap-text .desc-text {
+  font-family: "neue_montrealregular";
+  color: #6b6b6b;
+  font-size: 16px;
+}
+.finance .content .circle-finance {
+  max-width: 119.21px;
+}
+.finance .content .decoration {
+  max-width: 173px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1200px) {
+  .finance {
+    padding-bottom: 160px;
+  }
+  .finance .heading-content {
+    align-items: flex-start;
+  }
+  .finance .heading-content .wrap {
+    gap: 8px;
+    max-height: 42px;
+    margin-bottom: 38px;
+  }
+  .finance .heading-content .heading-text {
+    font-size: 62px;
+    max-width: 516px;
+    margin-bottom: 59px;
+  }
+  .finance .heading-content .desc-text {
+    max-width: 392px;
+    margin-bottom: 50px;
+  }
+  .finance .content .wrapper {
+    align-items: start;
+  }
+  .finance .content .wrapper.mt-minus {
+    margin-top: -62px;
+    align-items: end;
+  }
+  .finance .content .wrapper .card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 32px;
+  }
+  .finance .content .wrapper .card .wrap-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .finance .content .wrapper .card .wrap-text .heading-text {
+    font-family: "neue_montrealbold";
+    font-size: 24px;
+    color: #000000;
+  }
+  .finance .content .wrapper .card .wrap-text .desc-text {
+    font-family: "neue_montrealmedium";
+    font-size: 14px;
+    color: #6b6b6b;
+  }
+  .finance .content .wrapper .card .wrap-grap {
+    gap: 18px;
+  }
+  .finance .content .wrapper .card .wrap-grap .line-grap {
+    width: 6px;
+    background: rgb(184, 203, 204);
+    background: linear-gradient(180deg, rgb(184, 203, 204) 0%, rgb(113, 153, 153) 100%);
+    border-radius: 32px;
+  }
+  .finance .content .wrapper .card .wrap-grap .line-grap:nth-child(1) {
+    height: 80px;
+  }
+  .finance .content .wrapper .card .wrap-grap .line-grap:nth-child(2) {
+    height: 47px;
+  }
+  .finance .content .wrapper .card .wrap-grap .line-grap:nth-child(3) {
+    height: 116px;
+  }
+  .finance .content .wrapper .card .wrap-grap .line-grap:nth-child(4) {
+    height: 29px;
+  }
+  .finance .content .wrapper .card .wrap-grap .line-grap:nth-child(5) {
+    height: 80px;
+  }
+  .finance .content .wrapper .card .wrap-grap .line-grap:nth-child(6) {
+    height: 47px;
+  }
+  .finance .content .wrapper .card .wrap-grap .line-grap:nth-child(7) {
+    height: 29px;
+  }
+  .finance .content .wrapper .img-handCard {
+    margin-left: 30px;
+    max-width: 320px;
+  }
+  .finance .content .wrapper .img-wrap .wrap-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .finance .content .wrapper .img-wrap .wrap-text .heading-text {
+    font-size: 44px;
+    font-family: "neue_montrealregular";
+  }
+  .finance .content .wrapper .img-wrap .wrap-text .heading-text sup {
+    font-size: 20px;
+    line-height: 120%;
+    margin-left: 3px;
+  }
+  .finance .content .wrapper .img-wrap .wrap-text .desc-text {
+    font-family: "neue_montrealregular";
+    font-size: 16px;
+    max-width: 86px;
+    margin-left: 8px;
+  }
+  .finance .content .wrapper .card-income {
+    max-width: 289px;
+    margin-left: 110px;
+    margin-right: 84px;
+  }
+  .finance .content .wrapper .wrap .icon-income {
+    max-width: 42px;
+    position: absolute;
+    top: 22px;
+    left: 132px;
+  }
+  .finance .content .wrapper .wrap .wrap-text {
+    position: absolute;
+    top: 96px;
+    left: 132px;
+  }
+  .finance .content .wrapper .wrap .wrap-text .heading-text {
+    font-family: "neue_montrealregular";
+    font-size: 44px;
+    color: #ffffff;
+  }
+  .finance .content .wrapper .wrap .wrap-text .desc-text {
+    font-family: "neue_montrealregular";
+    color: #6b6b6b;
+    font-size: 16px;
+  }
+  .finance .content .circle-finance {
+    max-width: 86px;
+  }
+  .finance .content .decoration {
+    max-width: 130px;
+    position: absolute;
+    top: 39%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width: 768px) {
+  .finance {
+    padding-bottom: 160px;
+  }
+  .finance .heading-content {
+    align-items: flex-start;
+  }
+  .finance .heading-content .wrap {
+    gap: 8px;
+    max-height: 38px;
+    margin-bottom: 42px;
+  }
+  .finance .heading-content .heading-text {
+    font-size: 62px;
+    max-width: 80%;
+    margin-bottom: 42px;
+  }
+  .finance .heading-content .desc-text {
+    max-width: 392px;
+    margin-bottom: 42px;
+  }
+  .finance .content {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .finance {
+    padding-bottom: 160px;
+  }
+  .finance .heading-content {
+    align-items: flex-start;
+  }
+  .finance .heading-content .wrap {
+    gap: 0;
+    max-height: 30px;
+    margin-bottom: 42px;
+  }
+  .finance .heading-content .heading-text {
+    font-size: 42px;
+    max-width: 100%;
+    margin-bottom: 42px;
+  }
+  .finance .heading-content .desc-text {
+    max-width: 100%;
+    margin-bottom: 42px;
+  }
+  .finance .content {
+    display: none;
+  }
+}
+footer {
+  padding-block: 72px;
+}
+footer .wrap-logo {
+  margin-bottom: 32px;
+}
+footer .wrap-logo .navbar-brand {
+  font-size: 24px;
+  font-family: "neue_montrealbold";
+  text-decoration: none;
+  color: #ffffff;
+  gap: 8px;
+}
+footer .wrap-logo .navbar-brand img {
+  width: 37px;
+  height: 37px;
+  object-fit: cover;
+}
+footer .wrap-logo .wrap a {
+  gap: 8px;
+}
+footer .wrapper {
+  gap: 325px;
+}
+footer .wrapper .d-mobile {
+  display: none;
+}
+footer .heading-content {
+  align-items: flex-start;
+  max-width: 581px;
+}
+footer .heading-content .heading-text {
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+footer .heading-content .wrap {
+  margin-top: 64px;
+  gap: 190px;
+}
+footer .heading-content .wrap .desc-text {
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 5px;
+}
+footer .content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .content .wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 250px;
+}
+footer .content .wrap .heading-text {
+  font-size: 18px;
+  font-family: "neue_montrealregular";
+  color: #6b6b6b;
+  letter-spacing: 5px;
+}
+footer .content .wrap .desc-text {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "neue_montrealregular";
+  text-decoration: none;
+}
+footer .content .wrap .social-media {
+  gap: 12px;
+}
+
+@media (max-width: 1200px) {
+  footer {
+    padding-block: 72px;
+  }
+  footer .wrap-logo {
+    margin-bottom: 32px;
+  }
+  footer .wrap-logo .navbar-brand {
+    font-size: 24px;
+    font-family: "neue_montrealbold";
+    text-decoration: none;
+    color: #ffffff;
+    gap: 8px;
+  }
+  footer .wrap-logo .navbar-brand img {
+    width: 37px;
+    height: 37px;
+    object-fit: cover;
+  }
+  footer .wrap-logo .wrap a {
+    gap: 8px;
+    cursor: pointer;
+  }
+  footer .wrapper {
+    gap: 325px;
+  }
+  footer .heading-content {
+    align-items: flex-start;
+    max-width: 581px;
+  }
+  footer .heading-content .heading-text {
+    font-size: 62px;
+    color: #ffffff;
+    margin-bottom: 32px;
+  }
+  footer .heading-content .wrap {
+    width: 100%;
+    margin-top: 64px;
+    gap: unset;
+    justify-content: space-between;
+  }
+  footer .heading-content .wrap .desc-text {
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 5px;
+  }
+  footer .content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  footer .content .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 250px;
+  }
+  footer .content .wrap .heading-text {
+    font-size: 18px;
+    font-family: "neue_montrealregular";
+    color: #6b6b6b;
+    letter-spacing: 5px;
+  }
+  footer .content .wrap .desc-text {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "neue_montrealregular";
+    text-decoration: none;
+  }
+  footer .content .wrap .social-media {
+    gap: 12px;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    padding-block: 72px;
+  }
+  footer .wrap-logo {
+    margin-bottom: 32px;
+    flex-direction: column;
+  }
+  footer .wrap-logo .navbar-brand {
+    font-size: 24px;
+    font-family: "neue_montrealbold";
+    text-decoration: none;
+    color: #ffffff;
+    gap: 8px;
+  }
+  footer .wrap-logo .navbar-brand img {
+    width: 37px;
+    height: 37px;
+    object-fit: cover;
+  }
+  footer .wrap-logo .wrap {
+    display: none;
+  }
+  footer .wrap-logo .wrap a {
+    gap: 8px;
+    cursor: pointer;
+  }
+  footer .wrapper {
+    gap: unset;
+    flex-direction: column;
+  }
+  footer .heading-content {
+    align-items: flex-start;
+    max-width: 581px;
+  }
+  footer .heading-content .heading-text {
+    font-size: 62px;
+    color: #ffffff;
+    margin-bottom: 32px;
+  }
+  footer .heading-content .wrap {
+    width: 100%;
+    margin-top: 64px;
+    gap: unset;
+    justify-content: space-between;
+  }
+  footer .heading-content .wrap .desc-text {
+    font-size: 18px;
+    color: #6b6b6b;
+    text-decoration: none;
+    letter-spacing: 5px;
+    cursor: pointer;
+  }
+  footer .heading-content .wrap.d-desktop {
+    display: none;
+  }
+  footer .heading-content .wrap.d-desktop {
+    display: none;
+  }
+  footer .content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 52px;
+    gap: 52px;
+  }
+  footer .content .desc-text {
+    font-size: 18px;
+    color: #6b6b6b;
+    text-decoration: none;
+    letter-spacing: 5px;
+    cursor: pointer;
+    color: #6b6b6b;
+  }
+  footer .content .wrapp,
+  footer .content .wrap-term {
+    gap: 12px;
+  }
+  footer .content .d-mobile {
+    display: block;
+  }
+  footer .content .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 250px;
+  }
+  footer .content .wrap .heading-text {
+    font-size: 16px;
+    font-family: "neue_montrealregular";
+    color: #6b6b6b;
+    letter-spacing: 5px;
+  }
+  footer .content .wrap .desc-text {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "neue_montrealregular";
+    text-decoration: none;
+  }
+  footer .content .wrap .social-media {
+    gap: 12px;
+  }
+}
+@media (max-width: 576px) {
+  footer {
+    padding-block: 72px;
+  }
+  footer .wrap-logo {
+    margin-bottom: 32px;
+    flex-direction: column;
+  }
+  footer .wrap-logo .navbar-brand {
+    font-size: 20px;
+    font-family: "neue_montrealbold";
+    text-decoration: none;
+    color: #ffffff;
+    gap: 8px;
+  }
+  footer .wrap-logo .navbar-brand img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+  }
+  footer .wrap-logo .wrap {
+    display: none;
+  }
+  footer .wrap-logo .wrap a {
+    gap: 8px;
+    cursor: pointer;
+  }
+  footer .wrapper {
+    gap: unset;
+    flex-direction: column;
+  }
+  footer .heading-content {
+    align-items: flex-start;
+    max-width: 581px;
+  }
+  footer .heading-content .heading-text {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 32px;
+  }
+  footer .heading-content .wrap {
+    width: 100%;
+    margin-top: 64px;
+    gap: unset;
+    justify-content: space-between;
+  }
+  footer .heading-content .wrap .desc-text {
+    font-size: 18px;
+    color: #6b6b6b;
+    text-decoration: none;
+    letter-spacing: 5px;
+    cursor: pointer;
+  }
+  footer .heading-content .wrap.d-desktop {
+    display: none;
+  }
+  footer .content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 52px;
+    gap: 52px;
+  }
+  footer .content .desc-text {
+    font-size: 18px;
+    color: #6b6b6b;
+    text-decoration: none;
+    letter-spacing: 5px;
+    cursor: pointer;
+    color: #6b6b6b;
+  }
+  footer .content .wrapp,
+  footer .content .wrap-term {
+    gap: 12px;
+  }
+  footer .content .wrapp .desc-text,
+  footer .content .wrap-term .desc-text {
+    font-size: 16px;
+  }
+  footer .content .d-mobile {
+    display: block;
+  }
+  footer .content .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 250px;
+  }
+  footer .content .wrap .heading-text {
+    font-size: 16px;
+    font-family: "neue_montrealregular";
+    color: #6b6b6b;
+    letter-spacing: 5px;
+  }
+  footer .content .wrap .desc-text {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "neue_montrealregular";
+    text-decoration: none;
+  }
+  footer .content .wrap .social-media {
+    gap: 12px;
+  }
+}/*# sourceMappingURL=style.css.map */
