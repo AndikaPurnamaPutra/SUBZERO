@@ -3365,14 +3365,14 @@ footer {
                 gap: 16px;
                 max-width: 250px;
                 .heading-text {
-                    font-size: $fs-p-lg;
+                    font-size: $fs-p-md;
                     font-family: $font-neue_montreal-reguler;
                     color: $secondary-color;
                     letter-spacing: 5px;
                 }
                 .desc-text {
                     color: $white-color;
-                    font-size: 18px;
+                    font-size: $fs-p-lg;
                     font-family: $font-neue_montreal-reguler;
                     text-decoration: none;
                 }
