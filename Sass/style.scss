@@ -2764,9 +2764,19 @@ body {
         .decoration {
             max-width: 173px;
             position: absolute;
-            top: 50%;
-            left: 40%;
+            top: 40%;
+            left: 32%;
             transform: translate(-50%, -50%);
+            animation: spin 6s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
     }
 }
